@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* --- Variables Globales --- */
+:root {
+  --bg: #0f1226;
+  --fg: #E8ECF1;
+  --muted: #93A1B1;
+  --primary: #7C5CFF;
+  --accent: #06D6A0;
+  --card: #15193A;
+  --shadow: rgba(0, 0, 0, 0.45);
+}
+
+/* --- Réinitialisation et Base --- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Poppins', system-ui, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* --- Utilitaires --- */
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+/* --- Liens --- */
+a {
+  color: var(--fg);
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+/* --- Barre de Navigation (Topbar) --- */
+.topbar {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(13, 16, 35, 0.8), rgba(13, 16, 35, 0.2));
+  z-index: 10;
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.menu {
+  display: flex;
+  gap: 22px;
+}
+
+/* --- Footer --- */
+.footer {
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #c9d1d9;
+}
+
+/* --- Sections Générales --- */
+.section {
+  padding: 60px 0;
+}
+
+.section h2 {
+  margin: 0 0 20px;
+}
+
+/* --- Responsive Navigation --- */
+@media (max-width: 768px) {
+  .menu {
+    gap: 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

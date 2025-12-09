@@ -1,0 +1,122 @@
+/* --- Section Hero --- */
+.hero {
+  padding: 90px 0 40px;
+  background: 
+    radial-gradient(1200px 600px at 20% -10%, rgba(124, 92, 255, 0.35), transparent 60%), 
+    radial-gradient(900px 600px at 100% 0%, rgba(6, 214, 160, 0.25), transparent 60%);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.05;
+  margin: 0 0 10px;
+}
+
+.hero p {
+  font-size: clamp(16px, 1.8vw, 22px);
+  color: var(--muted);
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 18px;
+  background: var(--primary);
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(124, 92, 255, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(124, 92, 255, 0.45);
+}
+
+/* --- Galerie et Cartes --- */
+.gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.card img.loaded {
+  opacity: 1;
+}
+
+/* --- Fonctionnalités (Features) --- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.feature {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px var(--shadow);
+}
+
+.feature .icon {
+  font-size: 28px;
+}
+
+/* --- Challenges --- */
+.challenges ol {
+  line-height: 1.7;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0 30px;
+  }
+  
+  .gallery .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
