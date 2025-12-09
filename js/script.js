@@ -46,9 +46,5 @@
                 imageDisplay.classList.add('loaded');
             }
         }
-
-        if (imageTitle) {
-            imageTitle.textContent = `Image ${imageId} du Projet Héritage des cendres`;
-        }
     });
 })();
