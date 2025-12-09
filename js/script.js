@@ -23,7 +23,7 @@
         }
 
         const imageFileName = `img${imageId}.jpg`;
-        const imagePath = `img/${imageFileName}`;
+        const imagePath = `./img/${imageFileName}`;
         const imageDisplay = document.getElementById('image-display');
         const imageTitle = document.getElementById('image-title');
 
