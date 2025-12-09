@@ -4,8 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Site vitrine</title>
+    
+    <!-- Préconnexion aux domaines externes pour accélérer le chargement -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Préchargement du CSS critique -->
+    <link rel="preload" href="css/styles.css" as="style">
     <link rel="stylesheet" href="css/styles.css" />
-    </head>
+  </head>
   <body>
     <div class="topbar">
       <div class="container nav">
@@ -33,22 +40,34 @@
         <h2>Galerie</h2>
         <div class="grid">
           <div class="card">
-            <a href="image.html?id=1"><img src="img/img1.jpg" alt="Image 1" /></a>
+            <a href="image.html?id=1">
+              <img src="img/img1.jpg" alt="Image 1" width="400" height="300" loading="lazy" />
+            </a>
           </div>
           <div class="card">
-            <a href="image.html?id=2"><img src="img/img2.jpg" alt="Image 2" /></a>
+            <a href="image.html?id=2">
+              <img src="img/img2.jpg" alt="Image 2" width="400" height="300" loading="lazy" />
+            </a>
           </div>
           <div class="card">
-            <a href="image.html?id=3"><img src="img/img3.jpg" alt="Image 3" /></a>
+            <a href="image.html?id=3">
+              <img src="img/img3.jpg" alt="Image 3" width="400" height="300" loading="lazy" />
+            </a>
           </div>
           <div class="card">
-            <a href="image.html?id=4"><img src="img/img4.jpg" alt="Image 4" /></a>
+            <a href="image.html?id=4">
+              <img src="img/img4.jpg" alt="Image 4" width="400" height="300" loading="lazy" />
+            </a>
           </div>
           <div class="card">
-            <a href="image.html?id=5"><img src="img/img5.jpg" alt="Image 5" /></a>
+            <a href="image.html?id=5">
+              <img src="img/img5.jpg" alt="Image 5" width="400" height="300" loading="lazy" />
+            </a>
           </div>
           <div class="card">
-            <a href="image.html?id=6"><img src="img/img6.jpg" alt="Image 6" /></a>
+            <a href="image.html?id=6">
+              <img src="img/img6.jpg" alt="Image 6" width="400" height="300" loading="lazy" />
+            </a>
           </div>
         </div>
       </div>
@@ -97,10 +116,11 @@
 
     <div class="footer">
       <div class="container">
-        <p>TD Optimisation du temps de chargement d’un site web</p>
-        <p>© 2025 — BUT MMI Béziers - MAURIN N.</p>
+        <p>TD Optimisation du temps de chargement d'un site web</p>
+        <p>© 2025 – BUT MMI Béziers - MAURIN N.</p>
       </div>
     </div>
+    
     <script src="js/script.js" defer></script>
     <script src="js/metrics.js" defer></script>
   </body>
