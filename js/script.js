@@ -23,7 +23,7 @@
         }
 
         const imageFileName = `img${imageId}.jpg`;
-        const imagePath = `./img/${imageFileName}`;
+        const imagePath = `/img/${imageFileName}`; // Chemin absolu depuis la racine
         const imageDisplay = document.getElementById('image-display');
         const imageTitle = document.getElementById('image-title');
 
@@ -34,6 +34,14 @@
             imageDisplay.addEventListener('load', () => {
                 imageDisplay.classList.add('loaded');
             });
+            
+            imageDisplay.addEventListener('error', () => {
+                imageDisplay.alt = `Erreur de chargement de l'image ${imageId}`;
+                if (imageTitle) {
+                    imageTitle.textContent = `Erreur : Image ${imageId} introuvable`;
+                }
+            });
+            
             if (imageDisplay.complete) {
                 imageDisplay.classList.add('loaded');
             }
